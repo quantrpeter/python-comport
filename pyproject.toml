@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python-comport"
+version = "0.1.2"
+description = "Interactive arrow-key serial COM port terminal"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.7"
+dependencies = ["pyserial>=3.5"]
+keywords = ["serial", "com port", "uart", "terminal", "tty"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Environment :: Console",
+    "Topic :: Terminals :: Serial",
+]
+
+[project.scripts]
+comport = "python_comport:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["python_comport*"]

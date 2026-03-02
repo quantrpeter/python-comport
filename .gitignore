@@ -1,2 +1,9 @@
 /.comport-settings.json
 
+# Build artifacts
+dist/
+build/
+*.egg-info/
+__pycache__/
+*.pyc
+
