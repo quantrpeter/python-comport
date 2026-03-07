@@ -20,7 +20,7 @@ classifiers = [
 ]
 
 [project.scripts]
-comport = "python_comport:main"
+python-comport = "python_comport:main"
 
 [tool.setuptools.packages.find]
 where = ["."]
