@@ -58,6 +58,8 @@ def get_key():
                         return 'up'
                     elif ch3 == 'B':
                         return 'down'
+            elif ch == '\x03':
+                raise KeyboardInterrupt
             elif ch in ('\r', '\n'):
                 return 'enter'
             return None
@@ -112,7 +114,11 @@ def main():
     default_idx = next((i for i, p in enumerate(ports) if p.device == saved_port), 0)
 
     menu = SimpleMenu(options, default=default_idx)
-    selected_idx = menu.run()
+    try:
+        selected_idx = menu.run()
+    except KeyboardInterrupt:
+        print("\n\nInterrupted by user.")
+        sys.exit(0)
 
     selected_port = ports[selected_idx].device
 

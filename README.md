@@ -21,7 +21,7 @@ pip install python-comport
 ## Usage
 
 ```bash
-comport
+python-comport
 ```
 
 1. Use `↑ ↓` to select a COM port and press **Enter**
