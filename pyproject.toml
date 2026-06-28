@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "python-comport"
-version = "0.1.2"
+version = "0.1.4"
 description = "Interactive arrow-key serial COM port terminal"
 readme = "README.md"
 license = { text = "MIT" }
